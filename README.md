@@ -1,6 +1,6 @@
 Compiling protobufs and compiling Java code:
 
-mvn protobuf:compile protobuf:compile-custom && mvn package
+`mvn protobuf:compile protobuf:compile-custom && mvn package`
 
 Running server:
 `./target/globesort/bin/runServer <server_port>`
@@ -10,9 +10,11 @@ Running client:
 
 ---
 
-Create VMs in the following regions:  
+Create VMs in the following regions: 
+
 - Oregon: `cse291c-hw2-qiz232-ucsd.pem`  
 ssh -i cse291c-hw2-qiz232-ucsd.pem ec2-user@
+
 - Seoul (ap-northeast-2): `cse291c-hw2-qiz232-seoul.pem`  
 ssh -i cse291c-hw2-qiz232-seoul.pem ec2-user@ec2-13-209-42-251.ap-northeast-2.compute.amazonaws.com 
 - Ireland (eu-west-1): `cse291c-hw2-qiz232-ireland.pem`  
@@ -23,10 +25,12 @@ ssh -i cse291c-hw2-qiz232-saopaulo.pem ec2-user@ec2-18-231-166-188.sa-east-1.com
 ssh -i cse291c-hw2-qiz232-mumbai.pem ec2-user@ec2-13-232-58-114.ap-south-1.compute.amazonaws.com
 
 create the protobuf stubs and compile java:
- mvn protobuf:compile protobuf:compile-custom
- mvn package  
+ mvn protobuf:compile protobuf:compile-custom && mvn package  
 
-### TO-DO: 
+
+
+
+### Experiments: 
 1. Latency experiment (round-trip):  
       - experiments date/time
       - 3 times
@@ -38,16 +42,72 @@ create the protobuf stubs and compile java:
       - experiments date/time
       - 3 times
 
-### Results:
-- Seoul, Korea ↔ Dublin, Ireland
+### Results (unit: milliseconds):
+- Seoul, Korea ↔ Dublin, Ireland (number of integers: )
+      1. Latency experiment (round trip):  
+            - experiments date/time:
+            - 3 times:
+                  - first ping:
+                  - second ping:
 
-- Dublin, Ireland ↔ Sao Paulo, Brazil
+      2. Application-level throughput:  
+            - experiments date/time:
+            - 3 times:
+ 
+      3. Network-level throughput experiment (one-way):  
+            - experiments date/time:
+            - 3 times:
+                  - server sorting the data:
 
-- Sao Paulo, Brazil ↔ Mumbai, India
+- Dublin, Ireland ↔ Sao Paulo, Brazil (number of integers: )
+      1. Latency experiment (round trip):  
+            - experiments date/time:
+            - 3 times:
+                  - first ping:
+                  - second ping:
 
-- Mumbai, India ↔ Seoul, Korea
+      2. Application-level throughput:  
+            - experiments date/time:
+            - 3 times:
+ 
+      3. Network-level throughput experiment (one-way):  
+            - experiments date/time:
+            - 3 times:
+                  - server sorting the data:
+
+- Sao Paulo, Brazil ↔ Mumbai, India (number of integers: )
+      1. Latency experiment (round trip):  
+            - experiments date/time:
+            - 3 times:
+                  - first ping:
+                  - second ping:
+
+      2. Application-level throughput:  
+            - experiments date/time:
+            - 3 times:
+ 
+      3. Network-level throughput experiment (one-way):  
+            - experiments date/time:
+            - 3 times:
+                  - server sorting the data:
+
+- Mumbai, India ↔ Seoul, Korea (number of integers: )
+      1. Latency experiment (round trip):  
+            - experiments date/time:
+            - 3 times:
+                  - first ping:
+                  - second ping:
+
+      2. Application-level throughput:  
+            - experiments date/time:
+            - 3 times:
+ 
+      3. Network-level throughput experiment (one-way):  
+            - experiments date/time:
+            - 3 times:
+                  - server sorting the data:
 
 
 Reminder:
-1. has changed ireland and sao paulo to new repo
+1. has changed ireland and sao paulo to new repo: 3000000
 
