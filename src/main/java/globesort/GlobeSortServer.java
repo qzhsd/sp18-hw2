@@ -98,7 +98,7 @@ public class GlobeSortServer {
             responseObserver.onNext(response);
             responseObserver.onCompleted();
             long endTime = System.nanoTime();
-            long duration = (endTime - startTime) / 1000000000.0;
+            double duration = (endTime - startTime) / 1000000000.0;
             System.out.println("Time server sorts the data: " + duration + "milliseconds.");
 
         }
