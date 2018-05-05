@@ -45,7 +45,7 @@ public class GlobeSortClient {
         long endTime = System.nanoTime();
         System.out.println("Ping successful.");
         long duration = (endTime - startTime) / 1000000000.0;
-        System.out.println("Ping time(latency): " + duration + "milliseconds.")
+        System.out.println("Ping time(latency): " + duration + "milliseconds.");
 
         System.out.println("Requesting server to sort array");
         startTime = System.nanoTime();
@@ -54,7 +54,7 @@ public class GlobeSortClient {
         endTime = System.nanoTime();
         System.out.println("Sorted array");
         duration = (endTime - startTime) / 1000000000.0;
-        System.out.println("Application throughput(latency): " + duration + "milliseconds.")
+        System.out.println("Application throughput(latency): " + duration + "milliseconds.");
     }
 
     public void shutdown() throws InterruptedException {
