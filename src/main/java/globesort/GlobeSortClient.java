@@ -39,22 +39,33 @@ public class GlobeSortClient {
     }
 
     public void run(Integer[] values) throws Exception {
-        System.out.println("Requesting server to sort array");
-        long startTime = System.nanoTime();
-        IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
-        IntArray response = serverStub.sortIntegers(request);
-        long endTime = System.nanoTime();
-        System.out.println("Sorted array");
-        double duration = (endTime - startTime) / 1000000000.0;
-        System.out.println("Application throughput(latency): " + duration + "milliseconds.");
+        long startTime, endTime;
+        double duration;
 
-        System.out.println("Pinging " + serverStr + "...");
+        System.out.println("First Pinging " + serverStr + "...");
         startTime = System.nanoTime();
         serverStub.ping(Empty.newBuilder().build());
         endTime = System.nanoTime();
-        System.out.println("Ping successful.");
-        duration = (endTime - startTime) / 1000000000.0;
-        System.out.println("Ping time(latency): " + duration + "milliseconds.");
+        System.out.println("First Ping successful.");
+        duration = (endTime - startTime) / 1000000.0;
+        System.out.println("First Ping time(latency): " + duration + "ms.");
+
+        System.out.println("Requesting server to sort array");
+        startTime = System.nanoTime();
+        IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
+        IntArray response = serverStub.sortIntegers(request);
+        endTime = System.nanoTime();
+        System.out.println("Sorted array");
+        duration = (endTime - startTime) / 1000000.0;
+        System.out.println("Application throughput(latency): " + duration + " ms.");
+
+        System.out.println("Second Pinging " + serverStr + "...");
+        startTime = System.nanoTime();
+        serverStub.ping(Empty.newBuilder().build());
+        endTime = System.nanoTime();
+        System.out.println("Second Ping successful.");
+        duration = (endTime - startTime) / 1000000.0;
+        System.out.println("Second Ping time(latency): " + duration + "ms.");
     }
 
     public void shutdown() throws InterruptedException {
