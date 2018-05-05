@@ -96,7 +96,7 @@ public class GlobeSortServer {
             }
             IntArray response = responseBuilder.build();
             long endTime = System.nanoTime();
-            long duration = (endTime - startTime) / 1000000000;
+            long duration = (endTime - startTime) / 1000000;
             System.out.println("Timing for sorting: " + duration);
 
             responseObserver.onNext(response);
