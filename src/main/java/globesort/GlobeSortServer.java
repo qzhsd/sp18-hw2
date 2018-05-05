@@ -33,6 +33,7 @@ public class GlobeSortServer {
                 GlobeSortServer.this.stop();
             }
         });
+        System.out.println("Server Info: " + ip + ":" + port);
     }
 
     private void stop() {
@@ -100,6 +101,8 @@ public class GlobeSortServer {
             long endTime = System.nanoTime();
             double duration = (endTime - startTime) / 1000000.0;
             System.out.println("Time server sorts the data: " + duration + " ms.");
+            System.out.println("------------------------------------------------------------");
+
 
         }
     }

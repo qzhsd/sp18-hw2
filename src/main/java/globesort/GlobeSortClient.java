@@ -66,6 +66,8 @@ public class GlobeSortClient {
         System.out.println("Second Ping successful.");
         duration = (endTime - startTime) / 1000000.0;
         System.out.println("Second Ping time(latency): " + duration + "ms.");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
     }
 
     public void shutdown() throws InterruptedException {
