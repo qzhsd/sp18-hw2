@@ -18,9 +18,9 @@ ssh -i cse291c-hw2-qiz232-ucsd.pem ec2-user@
 - Seoul (ap-northeast-2): `cse291c-hw2-qiz232-seoul.pem`  
 ssh -i cse291c-hw2-qiz232-seoul.pem ec2-user@ec2-13-209-42-251.ap-northeast-2.compute.amazonaws.com 
 - Ireland (eu-west-1): `cse291c-hw2-qiz232-ireland.pem`  
-ssh -i cse291c-hw2-qiz232-ireland.pem ec2-user@ec2-54-194-70-49.eu-west-1.compute.amazonaws.com
+ssh -i cse291c-hw2-qiz232-ireland.pem ec2-user@ec2-34-253-5-138.eu-west-1.compute.amazonaws.com
 - Sao Paulo (sa-east-1):`cse291c-hw2-qiz232-saopaulo.pem`  
-ssh -i cse291c-hw2-qiz232-saopaulo.pem ec2-user@ec2-52-67-204-182.sa-east-1.compute.amazonaws.com
+ssh -i cse291c-hw2-qiz232-saopaulo.pem ec2-user@ec2-18-231-48-146.sa-east-1.compute.amazonaws.com
 - Mumbai (ap-south-1): `cse291c-hw2-qiz232-mumbai.pem`  
 ssh -i cse291c-hw2-qiz232-mumbai.pem ec2-user@ec2-13-232-58-114.ap-south-1.compute.amazonaws.com
 
@@ -48,4 +48,8 @@ create the protobuf stubs and compile java:
 - Sao Paulo, Brazil ↔ Mumbai, India
 
 - Mumbai, India ↔ Seoul, Korea
+
+
+Reminder:
+1. has changed ireland and sao paulo to new repo
 
