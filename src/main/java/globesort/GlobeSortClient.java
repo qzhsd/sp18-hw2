@@ -45,7 +45,7 @@ public class GlobeSortClient {
         IntArray response = serverStub.sortIntegers(request);
         long endTime = System.nanoTime();
         System.out.println("Sorted array");
-        long duration = (endTime - startTime) / 1000000000.0;
+        double duration = (endTime - startTime) / 1000000000.0;
         System.out.println("Application throughput(latency): " + duration + "milliseconds.");
 
         System.out.println("Pinging " + serverStr + "...");
