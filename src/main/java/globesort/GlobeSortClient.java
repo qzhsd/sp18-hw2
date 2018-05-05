@@ -39,14 +39,6 @@ public class GlobeSortClient {
     }
 
     public void run(Integer[] values) throws Exception {
-        System.out.println("Pinging " + serverStr + "...");
-        long startTime = System.nanoTime();
-        serverStub.ping(Empty.newBuilder().build());
-        long endTime = System.nanoTime();
-        System.out.println("Ping successful.");
-        double duration = (endTime - startTime) / 1000000000.0;
-        System.out.println("Ping time(latency): " + duration + "milliseconds.");
-
         System.out.println("Requesting server to sort array");
         startTime = System.nanoTime();
         IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
@@ -55,6 +47,14 @@ public class GlobeSortClient {
         System.out.println("Sorted array");
         duration = (endTime - startTime) / 1000000000.0;
         System.out.println("Application throughput(latency): " + duration + "milliseconds.");
+
+        System.out.println("Pinging " + serverStr + "...");
+        long startTime = System.nanoTime();
+        serverStub.ping(Empty.newBuilder().build());
+        long endTime = System.nanoTime();
+        System.out.println("Ping successful.");
+        double duration = (endTime - startTime) / 1000000000.0;
+        System.out.println("Ping time(latency): " + duration + "milliseconds.");
     }
 
     public void shutdown() throws InterruptedException {

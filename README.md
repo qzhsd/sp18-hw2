@@ -1,8 +1,6 @@
-Compiling protobufs:
-`mvn protobuf:compile protobuf:compile-custom`
+Compiling protobufs and compiling Java code:
 
-Compiling Java code:
-`mvn package`
+mvn protobuf:compile protobuf:compile-custom && mvn package
 
 Running server:
 `./target/globesort/bin/runServer <server_port>`
